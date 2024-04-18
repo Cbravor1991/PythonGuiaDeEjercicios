@@ -14,7 +14,7 @@ def bisiesto (anio):
     
     return respuesta
 
-print (bisiesto (2000))
+#print (bisiesto (2000))
 
 '''b) Dado un mes y un año, devolver la cantidad de días correspondientes.
  '''
@@ -51,9 +51,37 @@ def cant_dias_mes (mes, anio):
      elif (mes == 12):
           cantidad_dias = 31
      else:
-          cant_dias = 0
+          cantidad_dias = 0
      
      return cantidad_dias
 
-print(cant_dias_mes(2,2001))
+#print(cant_dias_mes(2,2000))
 
+'''c) Dada una fecha (día, mes, año), indicar si es válida o no '''
+
+def validar_fecha (dia, mes, anio):
+ 
+     if (dia< 1 or dia > 31) or (anio<0) or (mes< 1 or mes > 12) or ( dia>(cant_dias_mes(mes, anio))) :
+          return "fecha incoreccta"
+     else:
+          return "fecha correcta"
+     
+
+#print(validar_fecha(20,2,2000))
+
+'''
+d) Dada una fecha, indicar los días que faltan hasta fin de mes
+     Nota: En caso de ser una fecha invalida devolvera -1
+
+'''
+
+def dias_restantes (dia, mes, anio):
+     if (validar_fecha(dia, mes, anio)!= "fecha correcta"):
+          dias_restantes = -1
+     else:
+          dias_totales = cant_dias_mes (mes, anio)
+          dias_restantes = dias_totales - dia
+     
+     return dias_restantes
+
+print(dias_restantes(18,4,2024))
