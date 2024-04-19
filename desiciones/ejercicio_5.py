@@ -85,3 +85,5 @@ def dias_restantes (dia, mes, anio):
      return dias_restantes
 
 print(dias_restantes(18,4,2024))
+
+'''d) Dada una fecha, indicar los días que faltan hasta fin de año.'''
