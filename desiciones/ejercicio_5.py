@@ -75,7 +75,7 @@ d) Dada una fecha, indicar los días que faltan hasta fin de mes
 
 '''
 
-def dias_restantes (dia, mes, anio):
+def dias_restantes_mes (dia, mes, anio):
      if (validar_fecha(dia, mes, anio)!= "fecha correcta"):
           dias_restantes = -1
      else:
@@ -84,6 +84,29 @@ def dias_restantes (dia, mes, anio):
      
      return dias_restantes
 
-print(dias_restantes(18,4,2024))
+#print(dias_restantes_mes(18,4,2024))
 
-'''d) Dada una fecha, indicar los días que faltan hasta fin de año.'''
+'''e) Dada una fecha, indicar los días que faltan hasta fin de año.
+      Nota: En caso de ser una fecha invalida devolvera -1
+'''
+
+def dias_restantes_anio(dia, mes, anio):
+        if (validar_fecha(dia, mes, anio)== "fecha correcta"):
+               if (bisiesto(anio)!="bisiesto"):
+                    dias_totales_anio = 365
+               else:
+                    dias_totales_anio = 366
+                   
+               for i in range (1, mes):
+                     dias_totales_anio = dias_totales_anio -(cant_dias_mes(i, anio))
+               dias_totales_anio = dias_totales_anio - dia
+        else:
+              dias_totales_anio = -1
+
+        return dias_totales_anio
+             
+
+                    
+
+
+print (dias_restantes_anio(21,4,2024))
