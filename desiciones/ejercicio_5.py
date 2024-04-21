@@ -108,5 +108,18 @@ def dias_restantes_anio(dia, mes, anio):
 
                     
 
+#print (dias_restantes_anio(21,4,2024))
 
-print (dias_restantes_anio(21,4,2024))
+'''f) Dada una fecha, indicar la cantidad de días transcurridos en ese año hasta esa fecha'''
+
+def dias_del_anio(dia, mes,anio):
+     if(validar_fecha(dia, mes, anio)== "fecha correcta"):
+          dias_totales = 0
+          for i in range (1, mes):
+               dias_totales = dias_totales + cant_dias_mes(i, anio)
+          dias_totales = dias_totales + dia
+          
+     return dias_totales
+               
+               
+print (dias_del_anio(21,4,2024))       
