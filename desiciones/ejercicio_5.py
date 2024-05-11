@@ -122,4 +122,29 @@ def dias_del_anio(dia, mes,anio):
      return dias_totales
                
                
-print (dias_del_anio(21,4,2024))       
+#print (dias_del_anio(20,6,2020))  
+      
+
+'''g) Dadas dos fechas (día1, mes1, año1, día2, mes2, año2), indicar el tiempo transcurrido
+entre ambas, en años, meses y días.
+Nota: en todos los casos, invocar las funciones escritas previamente cuando sea posible.
+'''
+
+def tiempo_transcurrido(dia1, mes1, anio1, dia2, mes2, anio2):
+     if ((validar_fecha(dia1, mes1, anio1)== "fecha correcta")and (validar_fecha(dia2, mes2, anio2)== "fecha correcta")):
+          if (anio1<anio2) and (mes2>mes1) and (dia2>dia1):
+               anio = anio2 - anio1
+               mes = mes2 - mes1
+               print(dias_restantes_anio(dia1, mes1, anio1))
+               print(dias_restantes_anio(dia2, mes2, anio2))
+               dias = dias_restantes_anio(dia2, mes2, anio2) - dias_restantes_anio(dia1, mes1, anio1)
+               print(dias)
+               return anio, mes, dias
+               
+               
+               
+ 
+tiempo_transcurrido(20,6,2020, 21,7,2021)
+        
+               
+          
