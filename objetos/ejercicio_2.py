@@ -51,7 +51,9 @@ print (fraccion.__str__)
 frac1 = Fraccion(3, 4)
 frac2 = Fraccion(1, 2)
 
+# sobrecargamos el operador * definiendo el comportamiento del mismo en el metodo __mul__ 
 producto = frac1*frac2
+# sobrecargamos el operador + definiendo el comportamiento del mismo en el metodo __add__ 
 suma = frac1+frac2
 
 print("La multiplicación de las fracciones es:", producto )
