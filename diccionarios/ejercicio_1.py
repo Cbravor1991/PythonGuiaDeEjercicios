@@ -1,4 +1,4 @@
-"a)Escribir una función que reciba una lista de tuplas, y que devuelva un diccionario"
+"Escribir una función que reciba una lista de tuplas, y que devuelva un diccionario"
 "en donde las claves sean los primeros elementos de las tuplas, y los valores una lista con los"
 "segundos."
 "Por ejemplo:"
