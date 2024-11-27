@@ -18,9 +18,13 @@ def isBalanced(s):
     bracket_map = {')': '(', '}': '{', ']': '['}
     
     for char in s:
+        #busca en los valores corchete de apertura que esta en el valor
         if char in bracket_map.values():
             stack.append(char)
+        #ve que si no es un corvhete de aprtura es un cochete de cieere
         elif char in bracket_map.keys():
+            #verifica que la pila no este vacia y que el ultimo valor agregado coincida con el 
+            #valor de apertura para el corchete de cieere obtenido que es bracket_map[char]
             if not stack or stack[-1] != bracket_map[char]:
                 return "NO"
             stack.pop()
